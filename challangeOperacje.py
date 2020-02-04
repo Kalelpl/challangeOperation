@@ -17,10 +17,9 @@
 #  11 times 2 is 22
 #  12 times 2 is 24
 #  --------------------
-
-j=2
-
 with open('sample1.txt', 'a') as timetable:
     for i in range(1,13):
-        print((str(i).rjust(2)) + ' times ' + str(j) + ' is ' + str(i*j), file=timetable)
+        for j in range(1,11):
+            print((str(i).rjust(2)) + ' times ' + str(j) + ' is ' + str(i*j), file=timetable)
+        print('--'*40, file=timetable)
 
